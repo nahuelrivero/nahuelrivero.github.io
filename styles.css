@@ -1,0 +1,140 @@
+/* ********** Custom Properties ********** */
+:root {
+    --primary-color: #FF8C42;
+    --secondary-color: #0B132B;
+    --terciary-color: #A6A9B6;
+    /* --light-color: #F7F7F7;
+    --dark-color: #171b1d; */
+
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+  
+    /* --link-color: rgb(80, 158, 227); */
+    /* --bg-color: rgb(245, 245, 245); */
+  }
+  
+  /* ********** Reset Styles ********** */
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  a {
+    /* color: var(--link-color); */
+    transition: all 0.3s ease-out;
+  }
+  
+  a:hover {
+    /* color: var(--first-color); */
+  }
+  h1,h2,h3,h4,h5,h6 {
+    font-family: "Poppins", sans-serif;
+  }
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mis estilos */
+.carousel-index {
+    height: 50vh;
+}
+.carousel {
+   color: var(--secondary-color);
+}
+.carousel-item img {
+    object-fit: cover; /* Ajusta la imagen para llenar el contenedor sin distorsión */
+}
+.services {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+.services_item {
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+              0 2px 2px rgba(0,0,0,0.12), 
+              0 4px 4px rgba(0,0,0,0.12), 
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+    margin-bottom: 2rem;
+}
+.services_item .card {
+    /* border-radius: 50px; */
+    height: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services_item .card .card-body {
+    flex: 0 0 auto;
+    padding: 1rem 1rem;
+}
+.services_item .card img {
+    width: 60px;
+}
+
+/*  WORK*/
+.work-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.work {
+    background-color: var(--secondary-color);
+}
+.work-container-fluid {
+    
+}
+.work__title {
+    color: #fff;
+}
+.work__marca {
+    width: 200px;
+}
+
+/* OFERTA */
+.oferta {
+    background-color: var(--primary-color);
+}
+.oferta-container .card-body{
+    color: #fff;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.oferta-container .btn {
+    background-color: var(--primary-color);
+    color: black;
+    font-weight: bold;
+}
+/* Footer */
+.footer {
+    background-color: var(--secondary-color);
+}
+.footer__content {
+    color: #fff;
+    text-align: center;
+}
+.footer img {
+    display: block;
+    width: 150px;
+}
+.redes {
+    display: flex;
+}
+.redes img {
+    width: 50px;
+}
+.redes a {
+    display: inline-block;
+    margin-right: 20px;
+}
