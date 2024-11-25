@@ -1,0 +1,416 @@
+/* ********** Custom Properties ********** */
+:root {
+    --primary-color: #ff8c42;
+    --secondary-color: #0B132B;
+    --terciary-color: #A6A9B6;
+    --z-back: -10;
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+  }
+  
+  /* ********** Reset Styles ********** */
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  a {
+    /* color: var(--link-color); */
+    transition: all 0.3s ease-out;
+  }
+  
+  h1,h2,h3,h4,h5,h6 {
+    font-family: "Poppins", sans-serif;
+  }
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Mis estilos */
+/* Header */
+.nav {
+    background-color: var(--secondary-color);
+}
+.nav .nav-link {
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    transition: color 0.3s ease; 
+}
+.nav .nav-link:hover {
+    color: var(--primary-color);
+}
+.navbar-toggler {
+    border-color: var(--primary-color);
+}
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+  }
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='30' height='30'%3e%3cpath stroke='rgb(255, 140, 66)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.carousel-item {
+    width: 100%; 
+    height: 600px; 
+    overflow: hidden; 
+    position: relative;
+}
+.carousel-item::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+}
+.carousel-index img {
+width: 100%; 
+height: 100%; 
+object-fit: cover; 
+}
+.carousel {
+   color: var(--secondary-color);
+}
+
+/* Services */
+.services {
+    color: #fff;
+    background-color: var(--primary-color);
+    flex-direction: column;
+}
+.services__title,
+.products__title,
+.custom-title {
+    padding: 1rem 4rem;
+}
+.services__item {
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 2rem;
+}
+.services__item .card {
+    height: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.services__item .card .card-body {
+    flex: 0 0 auto;
+    padding: 1rem 1rem;
+}
+.services__item .card img {
+    width: 60px;
+}
+
+/*  WORK*/
+.services__title, 
+.work__title,
+.products__title,
+.custom-title {
+    background-color: var(--secondary-color);
+    display: inline-block;
+    border-radius: 10px;
+}
+
+.work {
+    background-color: var(--primary-color);
+}
+.work-container-fluid {
+    background-color: var(--secondary-color);
+}
+.work__title {
+    color: #fff;
+    padding: 1rem 1.5rem 0 1.5rem;
+    margin-bottom: 0;
+    width: 80%;
+    border-radius: 10px 10px 0 0;
+}
+.work__marca {
+    width: 200px;
+}
+
+/* OFERTS */
+.oferta,
+.products {
+    background-color: var(--primary-color);
+}
+.card__oferta,
+.card__products {
+    max-width: 70%;
+    width: 100%;
+    border: none;
+}
+.oferta-container .card-body,
+.products-container .card-body{
+    color: #fff;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.oferta-card__img,
+.products-card__img {
+    object-fit: cover; /* Ajusta la imagen para que no se distorsione */
+    height: auto; /* Ajusta la altura automáticamente */
+}
+.btn-oferta:hover,
+.btn-products:hover {
+    transform: scale(1.1);
+}
+/* Footer */
+.footer {
+    background-color: var(--secondary-color);
+}
+.footer__content {
+    color: #fff;
+    text-align: center;
+}
+.footer img {
+    display: block;
+    width: 110px;
+}
+.footer__redes img {
+    width: 50px;
+}
+.footer__redes a {
+    display: inline-block;
+    margin-right: 20px;
+}
+/* Products */
+.products__title {
+    color: #fff;
+}
+
+.products__description {
+    font-weight: bold;
+    color: black;
+}
+
+/* About Us */
+.banner-nosotros {
+    height: 85vh;
+    background-image: url(./img/banner1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-nosotros::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .banner-nosotros__title {
+    color: #fff;
+    z-index: var(--z-normal);
+  }
+
+.achievements {
+    background-color: var(--secondary-color);
+}
+.achievements__info p {
+    margin-bottom: 0;
+}
+.achievements__number {
+    color: #fff;
+}
+.achievements__description {
+    color: var(--primary-color);
+}
+.achievements__img {
+    width: 60px;
+}
+
+/* Pillars */
+.pillars,
+.history {
+ background-color: var(--primary-color);
+}
+
+.pillars__mission,
+.pillars__vision,
+.pillars__values,
+.history__content {
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    color: #fff;
+}
+
+/* */
+.services__item, 
+.card__oferta,
+.card__products {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12), 
+    0 2px 2px rgba(0,0,0,0.12), 
+    0 4px 4px rgba(0,0,0,0.12), 
+    0 8px 8px rgba(0,0,0,0.12),
+    0 16px 16px rgba(0,0,0,0.12);
+}
+
+.btn-oferta, 
+.btn-contact,
+.btn-products,
+.btn-submit {
+    background-color: var(--primary-color);
+    color: black;
+    font-weight: 500;
+    border: none;
+    transition: all .3s;
+}
+
+.btn-oferta:hover,
+.btn-contact:hover,
+.btn-oferta:focus,
+.btn-contact:focus,
+.btn-products:hover,
+.btn-products:focus {
+    background-color: var(--primary-color);
+    color: initial;
+}
+.services-page,
+.products,
+.contact {
+    padding-top: 130px;
+}
+
+/* CONTACT */
+.contact {
+    background-color: var(--primary-color);
+}
+.custom-title {
+    color: white;
+}
+  .contact-section {
+    padding: 50px 0;
+  }
+
+  .form-container {
+    background-color: #0B132B; /* Fondo oscuro */
+    color: white;
+    padding: 30px;
+    border-radius: 20px; /* Bordes redondeados */
+    max-width: 900px;
+    margin: 50px auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .form-container label {
+    font-weight: bold;
+  }
+  
+  .form-container .form-control {
+    background-color: #ffffff; /* Fondo blanco para inputs */
+    color: #0d1117;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+  }
+  
+  .form-container .btn-submit {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    transition: background-color 0.3s;
+  }
+  
+  .form-container .btn-submit:hover {
+    background-color: #e07a35; /* Más oscuro al pasar el mouse */
+  }
+
+  .info-map-section {
+    background-color: var(--secondary-color); /* Fondo oscuro */
+    color: white;
+    padding: 20px;
+    border-radius: 20px; /* Bordes redondeados */
+  }
+
+  .info-box {
+    padding: 20px;
+  }
+
+  .map-box iframe {
+    width: 100%;
+    height: 300px; /* Tamaño predeterminado para pantallas pequeñas */
+    border: none;
+    border-radius: 0 0 20px 20px; /* Bordes redondeados cuando el mapa está debajo */
+  }
+
+/* MQ */
+@media (max-width: 576px) { /* Para pantallas pequeñas */
+    .form-container {
+      padding: 15px; /* Reduce el espacio interno */
+      max-width: 100%; /* Ocupa todo el ancho disponible */
+      margin: 20px; /* Añade margen alrededor */
+    }
+  
+    .form-container .form-control {
+      font-size: 14px; /* Tamaño de texto más pequeño */
+      padding: 8px 10px; /* Reduce el tamaño de los inputs */
+    }
+  
+    .form-container .btn-submit {
+      padding: 8px 20px; /* Botón más pequeño */
+      font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) { 
+    .card__oferta,
+    .card__products {
+      max-width: none; /* Desactiva el max-width */
+      width: 600px; /* Fija el ancho deseado */
+    }
+
+    .oferta-card__img,
+    .products-card__img,
+    .card__oferta .card-body,
+    .card__products .card-body {
+        width: 50%;
+    }
+
+    .info-map-section {
+        display: flex; /* Disposición en filas para pantallas grandes */
+        align-items: stretch;
+      }
+  
+      .info-box {
+        flex: 1; /* Ocupa la mitad del espacio */
+      }
+  
+      .map-box {
+        flex: 1; /* Ocupa la otra mitad */
+      }
+  
+      .map-box iframe {
+        height: 100%; /* Ajusta el alto del mapa para pantallas grandes */
+        border-radius: 0 20px 20px 0; /* Bordes redondeados solo en el lado derecho */
+      }
+}
+
+@media (min-width: 992px) { /* Breakpoint lg */
+    .card__products {
+        flex: 0 0 48%; /* Ocupa el 50% del ancho */
+        max-width: 48%; /* Asegura que no crezca más del 50% */
+    }
+
+    .flex-lg-equal {
+        flex: 1; /* Hace que todos los artículos tengan el mismo tamaño */
+        max-width: 32%; /* Distribuye 3 artículos en partes iguales */
+    }
+}
